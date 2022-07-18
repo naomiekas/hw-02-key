@@ -506,10 +506,10 @@ pipelines, one of which ends in a visualization, and a narrative.)</li>
 <pre class="r"><code>edibnb%&gt;%  
 group_by(neighbourhood)%&gt;%
   filter(neighbourhood %in% c(&quot;New Town&quot;, &quot;Old Town&quot;, &quot;West End&quot;, &quot;Stockbridge&quot;, &quot;Bruntsfield&quot;))%&gt;%
-  summarize(edibnb, mean = mean(price, na.rm = TRUE),
+  summarize(mean = mean(price, na.rm = TRUE),
             sd = sd(price, na.rm = TRUE),
-            min = min(price),
-            max = max(price),
+            min = min(price, na/rm = TRUE),
+            max = max(price, na.rm = TRUE),
             median = median(price, na.rm = TRUE),
             IQR = IQR(price, na.rm = TRUE))</code></pre>
 <ol start="5" style="list-style-type: decimal">

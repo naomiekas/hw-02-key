@@ -135,10 +135,10 @@ edibnb%>%
 edibnb%>%  
 group_by(neighbourhood)%>%
   filter(neighbourhood %in% c("New Town", "Old Town", "West End", "Stockbridge", "Bruntsfield"))%>%
-  summarize(edibnb, mean = mean(price, na.rm = TRUE),
+  summarize(mean = mean(price, na.rm = TRUE),
             sd = sd(price, na.rm = TRUE),
-            min = min(price),
-            max = max(price),
+            min = min(price, na/rm = TRUE),
+            max = max(price, na.rm = TRUE),
             median = median(price, na.rm = TRUE),
             IQR = IQR(price, na.rm = TRUE))
 ```
